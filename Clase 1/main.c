@@ -7,6 +7,8 @@
 
 void Saludar(void);
 int DameNumero(void);
+float SacarPromedio(int suma,int cantidad);
+void esPrimo(int numero);
 
 int main()
 {
@@ -23,7 +25,6 @@ int main()
     printf("\n    Resultados\n");
     printf("\nLa edad es: %d",edad);
     printf("\nLa altura es: %.1f \n",altura);
-
     */
 
     int contador=0;
@@ -41,7 +42,9 @@ int main()
         suma=suma+num;
         contador++;
     }
-    promedio = (float)suma/contador;
+    //promedio = (float)suma/contador;
+
+    promedio=SacarPromedio(suma,contador);
     printf("\nEl promedio es: %d ",suma);
     printf("\nEl promedio es: %.2f\n",promedio);
 
@@ -62,4 +65,16 @@ int DameNumero(void)
     printf("\nIngrese la cantidad de iteraciones: ");
     scanf("%d",&cantidad);
     return cantidad;
+}
+
+float SacarPromedio(int suma,int cantidad)
+{
+    float Promedio;
+    Promedio = (float)suma/cantidad;
+    return Promedio;
+}
+
+void esPrimo(int numero)
+{
+
 }
