@@ -36,6 +36,8 @@ int main()
     cambiarValorReferencia(&miDato);
     printf("Mi dato es: %d",miDato);
 
+    dividirPorReferencia();
+
 
     return 0;
 }

@@ -54,3 +54,12 @@ int cambiarValorReferencia(int* Valor)
     return 1;
 }
 
+int dividirPorReferencia(int DUno, int DDos,float *respuesta)
+{
+    if(DUno!=0)
+    {
+        *respuesta=(float)DUno/DDos;
+        return 1;
+    }
+    return 0;
+}

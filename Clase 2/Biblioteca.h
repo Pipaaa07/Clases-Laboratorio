@@ -7,6 +7,7 @@ int esDistintoACero(int numero);
 int factorial (int numero);
 int cambiarValor(int Valor);
 int cambiarValorReferencia(int* Valor);
+int dividirPorReferencia(int DUno, int DDos,float *respuesta);
 
 
 #endif // BIBLIOTECA_H_INCLUDED
