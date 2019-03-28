@@ -40,6 +40,8 @@ int factorial (int numero)
     return respuesta;
 }
 
+
+
 int cambiarValor(int Valor)
 {
     Valor=999;
@@ -48,7 +50,7 @@ int cambiarValor(int Valor)
 
 int cambiarValorReferencia(int* Valor)
 {
-    printf("El valor es: %d",*Valor);
+    printf("El valor es: %d\n",*Valor);
     *Valor=999;
 
     return 1;

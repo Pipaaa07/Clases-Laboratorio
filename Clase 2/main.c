@@ -2,10 +2,50 @@
 #include <stdlib.h>
 #include "Biblioteca.h"
 
-///* = Puntero a la direccion de memoria
+/// "*" = Puntero a la direccion de memoria
+
+int esUnNumero(char*cadena)
+{
+
+    int indice=0;
+    int retorno=0;
+
+    ///printf("\nPalabra por parametro %s",cadena);
+
+    while(cadena[indice]!='\0')
+    {
+        if(cadena[indice]<'\0' || cadena[indice]>'9')
+        {
+            break;
+        }
+        else
+        {
+            indice++;
+        }
+    }
+    if (cadena[indice]=='\0')
+    {
+        retorno=1;
+    }
+    return retorno;
+}
 
 int main()
 {
+    char letra;
+    char palabra[10];
+    int numero;
+    int es;
+
+    scanf("%s",&palabra);
+    fflush(stdin);
+    printf("\nPalabra ingresada %s",palabra);
+
+    es=esUnNumero(palabra);
+    if(es==1)
+    {
+        printf("\nEs correcto");
+    }else{printf("\nNo es correcto");}
     /*int edad;
     int retorno;
     do
@@ -30,14 +70,27 @@ int main()
     unFactorial=factorial(5);
     printf("El factorial es: %d\n",unFactorial);*/
 
+    /*
     int miDato=333;
     cambiarValor(miDato);
-    printf("Mi dato es: %d",miDato);
+    printf("Mi dato es: %d\n",miDato);
     cambiarValorReferencia(&miDato);
-    printf("Mi dato es: %d",miDato);
+    printf("Mi dato es: %d\n",miDato);
+    */
 
-    dividirPorReferencia();
+    /*
+     int indice=0;
 
+     while(indice<20)
+     {
+         if(palabra[indice]=='\0')
+         {
+             printf("el barra cero esta en %d",indice);
+         }
+         printf("\nletra %c",palabra[indice]);
+         indice++;
+     }
 
+     */
     return 0;
 }
